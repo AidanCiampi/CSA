@@ -25,6 +25,4 @@ public class Method {
         int y = x + 1;
         System.out.println("One more than " + y);
     }
-}
-
-
+} 
