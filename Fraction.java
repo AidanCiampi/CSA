@@ -100,7 +100,7 @@ public class Fraction {
 		Fraction f7 = new Fraction (8,9);
         Fraction f8 = new Fraction (3,7);
         Fraction f9 = f7.add(f8);
-        System.out.println(f7);
+		System.out.println(f7 + " + " + f8 + " = " + f9);
 		
 
 	}
