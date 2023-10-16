@@ -31,28 +31,19 @@ public class PollDisplayPanel extends JPanel
   public void vote1(){
   count1 = count1 + 1;
   }
-  {
-
-    //______________________________________
-  }
-
+  
   // Increments count2
   public void vote2(){
   count2 = count2 + 1;
   }
-  {
-
-    //______________________________________
-  }
-
+ 
   // Increments count3
   public void vote3(){
   count3 = count3 + 1;
   }
-  {
-  }
+  
 
-    //______________________________________
+   
   
 
   // Returns a string representation of this object
@@ -96,7 +87,19 @@ public class PollDisplayPanel extends JPanel
       int degrees;
       g.setColor(Color.RED);
       degrees = countToDegrees(count1, total);
+      fromDegree = fromDegree + degrees;
       drawSector(g, x, y, r, fromDegree, degrees);
+     
+
+      g.setColor(Color.GREEN);
+      degrees = countToDegrees(count2, total);
+      drawSector(g,x,y,r, fromDegree, degrees);
+     fromDegree = fromDegree + degrees; 
+
+      g.setColor(Color.BLUE);
+      degrees = countToDegrees(count3, total);
+      drawSector(g, x, y, r, fromDegree, degrees);
+
 
       //_________________________________________________
 
@@ -116,7 +119,7 @@ public class PollDisplayPanel extends JPanel
     y += (r + 20);
     g.setColor(Color.BLACK);
 
-    //g.drawString( _______________ , x - r, y);
+    g.drawString( name1 +  , x - r, y);
 
     //g.drawString( _______________ , x, y);
 
@@ -136,12 +139,17 @@ public class PollDisplayPanel extends JPanel
 
   // Returns the number of degrees in a pie slice that
   // corresponds to count / total, rounded to the nearest integer.
-  private int countToDegrees(int count, int total)
-  {
-  //____________________________________________________
-
-    return 0;
+  private int countToDegrees(double count, double total){
+   double degrees =  (count / total)*360;  
+    return (int)degrees; 
   }
+
+
+    
+  
+    
+  
+  
 
 
   // Draws a sector, centered at x, y, of radius r,
