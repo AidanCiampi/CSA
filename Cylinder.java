@@ -1,4 +1,4 @@
-public class Cylinder{
+public class Cylinder {
 
 private Circle base;
 private double height;
@@ -29,3 +29,5 @@ public double sa(){
         System.out.println("surface area = " + sa);
     }
 }
+
+
