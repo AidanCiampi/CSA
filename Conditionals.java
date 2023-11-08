@@ -37,10 +37,10 @@ public class Conditionals {
         } else if (a > 21 && b > 21){
             return 0;
         }
-        else if (a - b > 0){
+        else if (a > b){
             return b;
         }
-        else if (b - a >0){
+        else if (b > a){
             return a;
         }
         return 0;
