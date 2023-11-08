@@ -48,14 +48,14 @@ public class Conditionals {
     public static void main(String[] args){
         Conditionals condition = new Conditionals();
         // Chimp
-        System.out.println ("Question 1: \n");
+        System.out.println ("Chimp: \n");
         System.out.println(condition.chimpTrouble(true, true));
         System.out.println(condition.chimpTrouble(false, false));
         System.out.println(condition.chimpTrouble(true, false));
         System.out.println(condition.chimpTrouble(false,true));
         System.out.println("\n");
         // Coords
-        System.out.println("Question 2: \n");
+        System.out.println("Coords: \n");
         System.out.println(condition.negPos(1, -1, false));
         System.out.println(condition.negPos(-1, 1, false));
         System.out.println(condition.negPos(1, 1, false));
@@ -66,7 +66,7 @@ public class Conditionals {
         System.out.println(condition.negPos(4, -5, true));
         System.out.println("\n");
         // Phone
-        System.out.println("Question 3: \n");
+        System.out.println("Phone: \n");
         System.out.println(condition.pickUpPhone(false, false, true));
         System.out.println(condition.pickUpPhone(true, true, true));
         System.out.println(condition.pickUpPhone(true, true, false));
@@ -75,7 +75,7 @@ public class Conditionals {
         System.out.println(condition.pickUpPhone(false, false, false));
         System.out.println("\n");
         // Days
-        System.out.println("Question 4: \n");
+        System.out.println("Days: \n");
         System.out.println(condition.setAlarm(1, false));
         System.out.println(condition.setAlarm(5, false));
         System.out.println(condition.setAlarm(0, false));
@@ -84,7 +84,7 @@ public class Conditionals {
         System.out.println(condition.setAlarm(6, true));
         System.out.println("\n");
         // 1 digit
-        System.out.println("Question 5: \n");
+        System.out.println("1 Digit: \n");
         System.out.println(condition.oneDigitSame(23, 19, 13));
         System.out.println(condition.oneDigitSame(23, 19, 12));
         System.out.println(condition.oneDigitSame(23, 19, 3));
@@ -92,7 +92,7 @@ public class Conditionals {
         System.out.println(condition.oneDigitSame(23, 29, 25));
         System.out.println("\n");
         // Blackjack
-        System.out.println("Question 6: \n");
+        System.out.println("Blackjack: \n");
         System.out.println(condition.blackjack(19, 21));
         System.out.println(condition.blackjack(21, 19));
         System.out.println(condition.blackjack(19, 22));
