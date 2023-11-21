@@ -12,24 +12,36 @@ public class CrapsGame
    *  Returns 1 if player won, -1 if player lost,
    *  0 if player continues rolling.
    */
-  public String diceRoll(int a, int b){
-    point =  a + b;
-    if (point == 7 || point == 11){
-      return "1"; 
-    }
-    if (point == 2 || point == 3 || point == 12){
-      return "-1";
+  
+  public int processRoll(int total){
+    if (point == 0){
+        if (total == 7 || total == 11){
+      return 1; 
+      }
+        else if (total == 2 || total == 3 || total == 12){
+      return -1;
+      }
+    
+    else 
+        if (point == 7){
+          point = 0;
+          return -1;
+        }
+        else if (point == total){
+          point = 0;
+          return 1;
+        }
+        else{
+          return 0;
+        }
       
+      }
+    // return total;
     }
-  }
-  public int processRoll(int total)
-  {
-
-    __________________________________________
-    ...
-
-    return result;
-  }
+  
+      
+    
+  
 
   /**
    *  Returns the saved point
