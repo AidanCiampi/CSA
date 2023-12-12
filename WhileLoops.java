@@ -56,11 +56,11 @@ public class WhileLoops {
         System.out.println(test.sumDigits(5765));
         System.out.println(test.sumDigits(343));
         System.out.println(test.sumDigits(90));
-        System.out.println(test.howManyYears(90, 120));
-        System.out.println(test.howManyYears(140,160));
-        System.out.println(test.howManyYears(180, 190)); 
+        System.out.println(test.howManyYears(111.2, 120));
+        System.out.println(test.howManyYears(111.2,150));
         printSum(6);
         printSum(8);
+        printSum(10);
         System.out.println(test.isPerfectSquare(9));
         System.out.println(test.isPerfectSquare(25));
         System.out.println(test.isPerfectSquare(11));
