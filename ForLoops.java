@@ -28,15 +28,36 @@ public class ForLoops {
     }
     public void sillyNumbers2(){
         for (int i = 1; i <= 4; i++){
-            for (int j = 9; j <= 9; j--){
-                for (int x = 9; x <= -1; x++){
+            for (int j = 9; j >= 1; j--){
+                for (int x = j; x > 0; x--){
                     System.out.print(j);
                 }
             }
             System.out.println();
         }
     }
+    public void dollarsAndStars(){
+        for (int i = 1; i <=7; i++){
+            for (int x = 2; x <i*2; x++){
+                System.out.print("*");
+            }
+            for (int j = 7;j >=i ; j--){
+                      System.out.print("$");
+            }
+            for (int x = 16; x >i*2; x--){
+                System.out.print("*");
+        }
+          for (int j = 7;j >=i ; j--){
+                      System.out.print("$");
+        }
+          for (int x = 2; x <i*2; x++){
+                System.out.print("*");
+          }
+            System.out.println();
 
+            }
+        }
+    
     public static void main(String[] args){ 
         ForLoops test = new ForLoops();
         System.out.println(test.addEvens(8));
@@ -45,5 +66,6 @@ public class ForLoops {
         test.printSquareBack(8);
         test.sillyNumbers(); 
         test.sillyNumbers2();
+        test.dollarsAndStars();
         }
 }
