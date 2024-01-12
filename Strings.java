@@ -12,9 +12,16 @@ public class Strings{
         
     }
     public static String negative(String x){
-        String change = x.replace( "0", "1");
-        String change1 = x.replace("0","1");
+        String change = x.replace( "0", "A");
+        String change1 = x.replace("1","0");
+        String change2 = x.replace("A","1");
+        String negative = 
         }
+   
+   
+        // public static String convertDate(String x){
+    //     String day = 
+    // }
         
     
 public static void main(String[] args) {
@@ -26,5 +33,6 @@ System.out.println(convertName("Biden,Joe"));
 System.out.println(convertName("the Clown, Bozo"));
 System.out.println(negative("0010111001"));
 System.out.println(negative("11111111"));
+// System.out.println("04/20/2014 becomes " + convertDate("04/20/2014"));
     }
 }
