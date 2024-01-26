@@ -21,12 +21,24 @@ public class Sentence {
 	 */
 	public int findNthTime(String str, int n) {
 		/* part a */
-		 
-		for(int a=0; a<=n; a++){
-			int b = str.indexOf("at");
-			return b;
+		int count = 0;
+		int index = -1;
+		String s = currSent;
+		for (int i = 0; i < s.length(); i++) {
+			if (s.charAt(i) == str.charAt(0)) {
+				count=count + 1;
+				if (count == n) {
+					index = i;
+				}
+			}
+			
+			if (index != -1) {
+				break; 
+				// "breaks loop. Saw on Youtube video"
+			}
+		} 
+    return index;
 	}
-}
 
 	/** Modifies the current sentence by replacing the nth occurrence of str with repl
 	 * If the nth occurrence does not exist, the current sentence is unchanged.
@@ -35,6 +47,8 @@ public class Sentence {
 	 */
 	public void replaceNthTime(String str, int n, String repl) {
 		/*  part b - you must call findNthTime here */
+		if(findNthTime(str, n) != -1)
+        currSent = currSent.substring(0, findNthTime(str, n)) + repl + currSent.substring(findNthTime(str, n)+str.length());
 	}
 
 	/** Returns the index of the last occurrence of str in the current sentence:
@@ -44,7 +58,7 @@ public class Sentence {
 	 */
 	public int findLastTime(String str) {
 		/* part c - you must call findNthTime here */
-		return -1;  // replace this
+		return index;  // replace this
 	}
 
 	public static void main(String[] args) {
