@@ -20,26 +20,19 @@ public class Sentence {
 	 * Postcondition: the current sentence if not modified.
 	 */
 	public int findNthTime(String str, int n) {
-		/* part a */
-		int count = 0;
-		int index = -1;
-		String s = currSent;
-		for (int i = 0; i < s.length(); i++) {
-			if (s.charAt(i) == str.charAt(0)) {
-				count=count + 1;
-				if (count == n) {
-					index = i;
-				}
+		int x = 0; 				/**Starting point with letters*/
+		for(int a =0; a<n; a++){		/**loop to find starting and end point of string*/	
+			int i = x; 
+			if (a==0)
+			x = currSent.indexOf(str);
+			else x = currSent.indexOf(str, i+str.length());
+			if (x ==-1){			/**Returns -1 if can't find word*/
+				return -1;
 			}
-			
-			if (index != -1) {
-				break; 
-				// "breaks loop. Saw on Youtube video"
-			}
-		} 
-    return index;
-	}
-
+		
+		}
+			return x; /**otherwise returns where it was found*/
+	}	
 	/** Modifies the current sentence by replacing the nth occurrence of str with repl
 	 * If the nth occurrence does not exist, the current sentence is unchanged.
 	 * Precondition: str.length() > 0 and n > 0
@@ -58,9 +51,8 @@ public class Sentence {
 	 */
 	public int findLastTime(String str) {
 		/* part c - you must call findNthTime here */
-		return index;  // replace this
+		
 	}
-
 	public static void main(String[] args) {
 		Sentence sentence1 = new Sentence("A cat ate late.");
 		System.out.println(sentence1.findNthTime("at",1));
