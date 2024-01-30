@@ -40,8 +40,10 @@ public class Sentence {
 	 */
 	public void replaceNthTime(String str, int n, String repl) {
 		/*  part b - you must call findNthTime here */
-		if(findNthTime(str, n) != -1)
-        currSent = currSent.substring(0, findNthTime(str, n)) + repl + currSent.substring(findNthTime(str, n)+str.length());
+		int x = findNthTime(str,n);
+		if (x!= -1){
+			currSent = currSent.substring(0,x) + repl + currSent.substring(x+str.length());
+		}
 	}
 
 	/** Returns the index of the last occurrence of str in the current sentence:
@@ -51,7 +53,8 @@ public class Sentence {
 	 */
 	public int findLastTime(String str) {
 		/* part c - you must call findNthTime here */
-		
+		int x = currSent.lastIndexOf(str);
+		return x;
 	}
 	public static void main(String[] args) {
 		Sentence sentence1 = new Sentence("A cat ate late.");
